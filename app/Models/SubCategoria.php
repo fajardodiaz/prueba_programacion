@@ -10,6 +10,6 @@ class SubCategoria extends Model
     use HasFactory;
 
     public function categoria(){
-        return $this->belongsTo(Categoria::class);
+        return $this->belongsTo(Publicacion::class);
     }
 }

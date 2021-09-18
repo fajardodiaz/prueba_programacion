@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Ubicacion extends Model
 {
     use HasFactory;
+
+    public function publicacion(){
+        return $this->belongsTo(Categoria::class);
+    }
+
 }
