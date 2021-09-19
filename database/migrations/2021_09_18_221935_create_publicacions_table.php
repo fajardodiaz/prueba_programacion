@@ -17,20 +17,20 @@ class CreatePublicacionsTable extends Migration
             $table->id();
 
             $table->string('publicacion_titulo');
-            $table->integer('ubicacion_id');
+            // $table->integer('ubicacion_id');
             $table->text('publicacion_descripcion');
-            $table->decimal('publicacion_precio',8,2);
-            $table->integer('subcategoria_id');
+            $table->decimal('publicacion_precio',8,2)->nullable();
+            // $table->integer('subcategoria_id_fk');
 
             $table->timestamps();
 
-            $table->foreignId('ubicacion_id')->references('ubicacion_id')->on('ubicacions')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+            // $table->foreignId('ubicacion_id_fk')->references('ubicacion_id')->on('ubicacions')
+            //     ->onDelete('cascade')
+            //     ->onUpdate('cascade');
 
-            $table->foreignId('subcategoria_id')->references('subcategoria_id')->on('subcategorias')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+            // $table->foreignId('subcategoria_id_fk')->references('subcategoria_id')->on('subcategorias')
+            //     ->onDelete('cascade')
+            //     ->onUpdate('cascade');
         });
     }
 
