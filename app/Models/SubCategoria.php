@@ -10,6 +10,14 @@ class SubCategoria extends Model
     use HasFactory;
 
     public function categoria(){
-        return $this->belongsTo(Publicacion::class);
+        return $this->belongsTo(Categoria::class);
+    }
+
+    public function publicacion(){
+        return $this->hasMany(Publicacion::class);
+    }
+
+    public function reciente_publicacion(){
+        return $this->hasOne(Publicacion::class)->latestOfMany();
     }
 }

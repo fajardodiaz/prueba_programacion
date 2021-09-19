@@ -10,7 +10,7 @@ class Ubicacion extends Model
     use HasFactory;
 
     public function publicacion(){
-        return $this->belongsTo(Categoria::class);
+        return $this->hasMany(Publicacion::class);
     }
 
 }
