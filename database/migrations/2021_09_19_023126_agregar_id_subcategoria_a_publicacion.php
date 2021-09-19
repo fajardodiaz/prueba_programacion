@@ -18,7 +18,7 @@ class AgregarIdSubcategoriaAPublicacion extends Migration
             $table->bigInteger('subcategoria_id')->unsigned()->nullable()
                 ->after('ubicacion_id');
 
-            $table->foreign('subcategoria_id')->references('id')->on('publicacions')
+            $table->foreign('subcategoria_id')->references('id')->on('subcategorias')
                 ->onDelete('set null')
                 ->onUpdate('cascade');
 

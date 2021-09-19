@@ -19,7 +19,7 @@ class AgregarIdUbicacionYSubcategoriaAPublicacion extends Migration
             $table->bigInteger('ubicacion_id')->unsigned()->nullable()
                 ->after('publicacion_precio');
 
-            $table->foreign('ubicacion_id')->references('id')->on('publicacions')
+            $table->foreign('ubicacion_id')->references('id')->on('ubicacions')
                 ->onDelete('set null')
                 ->onUpdate('cascade');
 
