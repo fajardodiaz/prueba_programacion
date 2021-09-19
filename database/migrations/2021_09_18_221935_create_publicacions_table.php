@@ -14,21 +14,21 @@ class CreatePublicacionsTable extends Migration
     public function up()
     {
         Schema::create('publicacions', function (Blueprint $table) {
-            $table->id('publicacion_id');
+            $table->id();
 
             $table->string('publicacion_titulo');
-            $table->smallInteger('ubicacion_id');
+            $table->integer('ubicacion_id');
             $table->text('publicacion_descripcion');
             $table->decimal('publicacion_precio',8,2);
-            $table->smallInteger('subcategoria_id');
+            $table->integer('subcategoria_id');
 
             $table->timestamps();
 
-            $table->foreign('ubicacion_id')->references('ubicacion_id')->on('ubicacions')
+            $table->foreignId('ubicacion_id')->references('ubicacion_id')->on('ubicacions')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->foreign('subcategoria_id')->references('subcategoria_id')->on('subcategorias')
+            $table->foreignId('subcategoria_id')->references('subcategoria_id')->on('subcategorias')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
