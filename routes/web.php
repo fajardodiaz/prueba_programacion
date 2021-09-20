@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ScrapCategoriaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,8 +23,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/categorias', function () {
-    return view('categorias');
-})->middleware(['auth'])->name('categorias');
+Route::get('/categorias', [ScrapCategoriaController::class,'mostrar'])
+->middleware(['auth'])->name('categorias');
+
 
 require __DIR__.'/auth.php';
