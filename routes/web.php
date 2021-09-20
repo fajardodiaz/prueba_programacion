@@ -19,10 +19,13 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+
+//Vista del Dashboard donde se encuentra la explicacion del proyecto
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+//Muestra las categorias de la pagina web, la misma pagina no devuelve todas las categorias
 Route::get('/categorias', [ScrapCategoriaController::class,'mostrar'])
 ->middleware(['auth'])->name('categorias');
 

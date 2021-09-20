@@ -8,41 +8,38 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    Que es Web Scraping?
-                </div>
-                <div class="p-6 bg-white border-b border-gray-200">
-                Los motores de búsqueda, como Google, utilizan desde hace tiempo los denominados rastreadores
-                web o crawlers, que exploran Internet en busca de términos definidos por el usuario.
-                Los rastreadores son tipos especiales de bots, que visitan una página web tras otra para
-                generar asociaciones con términos de búsqueda y categorizarlos. El primer rastreador web se
-                creó ya en 1993, cuando se presentó el primer motor de búsqueda: Jumpstation.
-                </div>
-            </div>
 
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    Que es la Autenticación?
-                </div>
-                <div class="p-6 bg-white border-b border-gray-200">
-                Los motores de búsqueda, como Google, utilizan desde hace tiempo los denominados rastreadores
-                web o crawlers, que exploran Internet en busca de términos definidos por el usuario.
-                Los rastreadores son tipos especiales de bots, que visitan una página web tras otra para
-                generar asociaciones con términos de búsqueda y categorizarlos. El primer rastreador web se
-                creó ya en 1993, cuando se presentó el primer motor de búsqueda: Jumpstation.
-                </div>
-            </div>
 
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    Las tecnologias que he utilizado
+                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6 bg-white border-b border-gray-200">
+                        <p class="text-2xl text-black-700">
+                            Las tecnologias que he utilizado
+                        </p>
+                    </div>
+                    <div class="p-6 bg-white border-b border-gray-200">
+                        <p>Laravel como Framework de PHP</p>
+                        <p>Laravel Breeze para Autenticacion</p>
+                        <p>Tailwind.css para el Frontend</p>
+                        <p>Goute para Web Scraping</p>
+                        <p>Eloquent como ORM de Laravel</p>
+                    </div>
                 </div>
-                <div class="p-6 bg-white border-b border-gray-200">
-                <p>Laravel</p>
-                <p>Laravel Breeze</p>
-                <p>Tailwind.css</p>
+
+                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6 bg-white border-b border-gray-200">
+                        <p class="text-3xl text-black-700">
+                            Relaciones de los Modelos
+                        </p>
+                    </div>
+                    <div class="p-6 bg-white border-b border-gray-200">
+                        <p class="text-2xl text-black-700">Relaciones de los modelos
+                            <img src="{{ asset('images/relaciones.png')}}" alt="">
+                        </p>
+                        <p class="text-2xl text-black-700">Todas las tablas de la base de Datos
+                            <img src="{{ asset('images/relaciones completas.png')}}" alt="">
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </x-app-layout>
